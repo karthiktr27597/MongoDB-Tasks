@@ -1,7 +1,7 @@
 // >mongosh
 // >use MongoDB-Task1
 // > db.createCollection("products"); - Collection created
-// > db.mentor.insertMany(product.json) - data inserted
+// > db.mentor.insertMany(product.json) - input data inserted
 
 
 // 1. Find all the information about each products
