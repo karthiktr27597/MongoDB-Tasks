@@ -430,26 +430,6 @@ mentors = [
 
 Ans: db.topics.aggregate([{ $lookup: { from: "tasks", localField: "month", foreignField: "month", as: "October_tasks" } }, { $match: { month: "October" } }]);
 
-[
-    {
-        _id: ObjectId("64914bcda98d7081b34b5edb"),
-        topic: ['HTML', 'CSS'],
-        month: 'October',
-        October_tasks: [
-            {
-                _id: ObjectId("64886f07cb017f76a537d536"),
-                Task: [
-                    'API Task',
-                    'Async and Await Task',
-                    'Basic HTML page creaton',
-                    'CSS Task of a webpage'
-                ],
-                month: 'October'
-            }
-        ]
-    }
-]
-
 // 2. Find all the company drives which appeared between 15 oct - 2020 and 31 - oct - 2020
 
 Ans: db.company_drives.aggregate({ $match: { "date": { $gt: "15-oct-2020", $lt: "30-oct-2020" } } }, { $match: { "attendance_status": { $eq: "present" } } }).toArray();
